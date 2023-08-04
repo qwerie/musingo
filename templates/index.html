@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <title> MUSINGO </title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="인공지능이 보는 나의 패션 스타일은?">
+		<meta name="keywords" content="AI, Fashion Style">
+		<meta name="author" content="6mini">
+		<meta property="og:title" content="FASI: 인공지능 패션 스타일 분석기" />
+		<meta property="og:image" content="../static/img/m0.jpg" />
+        <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../static/css/bootstrap.css">
+		<link rel="stylesheet" href="../static/vendors/linericon/style.css">
+		<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/vendors/owl-carousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="../static/vendors/lightbox/simpleLightbox.css">
+		<link rel="stylesheet" href="../static/vendors/nice-select/css/nice-select.css">
+		<link rel="stylesheet" href="../static/vendors/animate-css/animate.css">
+		<link rel="stylesheet" href="../static/vendors/popup/magnific-popup.css">
+		<link rel="stylesheet" href="../static/vendors/flaticon/flaticon.css">
+        <!-- main css -->
+		<link rel="stylesheet" href="../static/css/style.css">
+		<link rel="stylesheet" href="../static/css/responsive.css">
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="/">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="https://github.com/sejongsmarcle">GitHub</a></li> 
+								<li class="nav-item"><a class="nav-link" href="http://www.smarcle.dev/">blog</a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+           	<div class="container box_1620">
+           		<div class="banner_inner d-flex align-items-center">
+					<div class="banner_content">
+						<div class="media">
+							<div class="d-flex">
+								<!--================image upload area =================-->
+								<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+								<!-- <img src="{{ url_for('static', filename='img/personal.jpg') }}" alt=""> -->
+								
+								
+								{% if label == 'f0' %}
+									<img class="result_img" src="../static/img/f0.jpg'" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'f1' %}
+									<img class="result_img" src="../static/img/f1.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'f2' %}
+									<img class="result_img" src="../static/img/f2.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'f3' %}
+									<img class="result_img" src="../static/img/f3.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'f4' %}
+									<img class="result_img" src="../static/img/f4.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'f5' %}
+									<img class="result_img" src="../static/img/f5.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'f6' %}
+									<img class="result_img" src="../static/img/f6.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'm0' %}
+									<img class="result_img" src="../static/img/m0.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'm1' %}
+									<img class="result_img" src="../static/img/m1.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'm2' %}
+									<img class="result_img" src="../static/img/m2.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'm3' %}
+									<img class="result_img" src="../static/img/m3.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'm4' %}
+									<img class="result_img" src="../static/img/m4.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'm5' %}
+									<img class="result_img" src="../static/img/m2.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% elif label == 'm6' %}
+									<img class="result_img" src="../static/img/m4.jpg" alt="" onclick="location.href='/';" style="cursor: pointer;">
+								{% else %}
+									<form method="post" action="/" name="imageFile" enctype="multipart/form-data" style="width: 100%;">
+										<dl>
+										<p>
+										<div class="image-upload-wrap">
+											<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" / name="file" autocomplete="off" required>
+											<div class="drag-text">
+												<h3>전신이 잘 보이는 패션 사진을<br>이곳에 업로드 해주세요!</h3>
+											</div>
+										</div>
+										<div class="file-upload-content">
+											<img class="file-upload-image" src="#" alt="your image" />
+											<div class="image-title-wrap">
+											<button type="button" onclick="removeUpload()" class="remove-image">Remove Image</button>
+											</div>
+											<p>
+												<div id="main-container">
+													<label id="main">
+														<input type="checkbox" name="gender">
+														<div id="tab">
+														<div id="circle"></div>
+														</div>
+														<div id="gender"></div>
+													</label>
+												</div>
+												<input type="submit" class="btn btn-dark" value="PREDICT" style="margin-top: 20px;">
+											</p>
+										</div>
+										</p>
+										</dl>
+									</form>
+								{% endif %}
+								<!--================image upload area =================-->
+							
+							</div>
+							<div class="media-body">
+								<div class="personal_text">
+									
+									<h6>6가지 스타일로 분류된<br>당신의 패션이 궁금하다면?</br></h6>
+									<h3>MUSINGO</h3>
+									<h4>Fashion Style Analysis Web</h4>
+									<p>street, american casual, casual<br>formal, unique, romantic</br></p>
+									<ul class="list basic_info">
+										<li><a href="http://www.smarcle.dev/"><i class="lnr lnr-home"></i>DEV</a></li>
+										<li><a href="https://github.com/sejongsmarcle"><i class="lnr lnr-home"></i>GIT</a></li>
+									</ul>
+										</a></li>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <!--================Footer Area =================-->
+        <footer class="footer_area p_120">
+        	<div class="container">
+        		<div class="row footer_inner">
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget ab_widget">
+        					<div class="f_title">
+        						<h3>About Me</h3>
+        					</div>
+        					<p>일이삼사_SMARCLE<br>(전유진, 강태훈, 하승아, 석민정)</br></p>
+        					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+        				</aside>
+        			</div>
+        			<div class="col-lg-2">
+        				<aside class="f_widget social_widget">
+        					<div class="f_title">
+        						<h3>Follow Me</h3>
+        					</div>
+        					<ul class="list">
+        						<li><a href="https://github.com/sejongsmarcle/2023_Summer_Makers_Day"><i class="fa fa-github"></i></a></li>
+        						<li><a href="http://www.smarcle.dev/"><i class="fa fa-bold"></i></a></li>
+        					</ul>
+        				</aside>
+        			</div>
+        		</div>
+        	</div>
+        </footer>
+        <!--================End Footer Area =================-->
+        
+        
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/popper.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/stellar.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/lightbox/simpleLightbox.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/nice-select/js/jquery.nice-select.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/isotope/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/isotope/isotope.pkgd.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/popup/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/counter-up/jquery.waypoints.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='vendors/counter-up/jquery.counterup.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    </body>
+</html>

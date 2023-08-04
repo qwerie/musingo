@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="../static/favicon.ico">
+        <title>smarcle: 인공지능 패션 스타일 분석기</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--익스플로러 브라우저 고려-->
+		<meta name="description" content="인공지능이 보는 나의 패션 스타일은?"><!--해당 문서의 설명-->
+		<meta name="keywords" content="AI, Fashion Style"><!--해당 문서의 키워드-->
+		<meta name="author" content="1234"><!--해당 문서의 소유자 , 제작자-->
+		<meta property="og:title" content="FASI: 인공지능 패션 스타일 분석기" />
+		<meta property="og:image" content="../static/img/m0.jpg" />
+        <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../static/css/bootstrap.css">
+		<link rel="stylesheet" href="../static/vendors/linericon/style.css">
+		<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/vendors/owl-carousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="../static/vendors/lightbox/simpleLightbox.css">
+		<link rel="stylesheet" href="../static/vendors/nice-select/css/nice-select.css">
+		<link rel="stylesheet" href="../static/vendors/animate-css/animate.css">
+		<link rel="stylesheet" href="../static/vendors/popup/magnific-popup.css">
+		<link rel="stylesheet" href="../static/vendors/flaticon/flaticon.css">
+        <!-- main css -->
+		<link rel="stylesheet" href="../static/css/style.css">
+		<link rel="stylesheet" href="../static/css/responsive.css">
+    </head>
+
+
+
+
+
+
+
+
+
+
+
+
+    <body>
+		<script>		document.write("location.href : " + location.href + "<br>");
+		</script>
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="/"><img src="../static/img/logo.png" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+           	<div class="container box_1620">
+           		<div class="banner_inner d-flex align-items-center">
+					<div class="banner_content">
+						<div class="media">
+							<div class="d-flex">
+								<!--================image upload area =================-->
+								<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+								<!-- <img src="../static/img/personal.jpg" alt=""> -->
+								
+								<script>
+									window.onload = function() {
+										var label = '';
+
+										var imgSrc;
+										var imgElement = document.createElement('img');
+										imgElement.className = 'result_img';
+										imgElement.alt = '';
+										imgElement.onclick = function() {
+											location.href ="http://127.0.0.1:5500/templates/index.html";
+										};
+										imgElement.style.cursor = 'pointer';
+							
+										if (label === 'f0') {
+											imgSrc = '../static/img/f0.jpg';
+										} else if (label === 'f1') {
+											imgSrc = '../static/img/f1.jpg';
+										} else if (label === 'f2') {
+											imgSrc = '../static/img/f2.jpg';
+										} else if (label === 'f3') {
+											imgSrc = '../static/img/f3.jpg';
+										} else if (label === 'f4') {
+											imgSrc = '../static/img/f4.jpg';
+										} else if (label === 'f5') {
+											imgSrc = '../static/img/f5.jpg';
+										} else if (label === 'f6') {
+											imgSrc = '../static/img/f6.jpg';
+										} else if (label === 'm0') {
+											imgSrc = '../static/img/m0.jpg';
+										} else if (label === 'm1') {
+											imgSrc = '../static/img/m1.jpg';
+										} else if (label === 'm2') {
+											imgSrc = '../static/img/m2.jpg';
+										} else if (label === 'm3') {
+											imgSrc = '../static/img/m3.jpg';
+										} else if (label === 'm4') {
+											imgSrc = '../static/img/m4.jpg';
+										} else if (label === 'm5') {
+											imgSrc = '../static/img/m5.jpg';
+										} else if (label === 'm6') {
+											imgSrc = '../static/img/m6.jpg';
+										} else {
+											imgSrc = '../static/img/default.jpg';
+										}
+							
+										imgElement.src = imgSrc;
+										document.body.appendChild(imgElement);
+									};
+								</script>
+
+									<form method="post" action="/" name="imageFile" enctype="multipart/form-data" style="width: 100%;">
+
+										<dl>
+										<p>
+										<div class="image-upload-wrap">
+											<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" / name="file" autocomplete="off" required>
+											<div class="drag-text">
+												<h3>전신이 잘 보이는 패션 사진을<br>드래그하거나 클릭하여 추가하세요!</h3>
+											</div>
+										</div>
+										<div class="file-upload-content">
+											<img class="file-upload-image" src="#" alt="your image" />
+											<div class="image-title-wrap">
+											<button type="button" onclick="removeUpload()" class="remove-image">Remove Image</button>
+											</div>
+											<p>
+												<div id="main-container">
+													<label id="main">
+														<input type="checkbox" name="gender">
+														<div id="tab">
+														<div id="circle"></div>
+														</div>
+														<div id="gender"></div>
+													</label>
+												</div>
+												<input type="submit" class="btn btn-dark" value="PREDICT" style="margin-top: 20px;">
+											</p>
+										</div>
+										</p>
+										</dl>
+									</form>
+							<!--{% endif %}모르겠음-->	
+								<!--================image upload area =================-->
+							
+							</div>
+							<div class="media-body">
+								<div class="personal_text">
+									
+									<h6>인공지능이 분류하는 나의 패션은?</h6>
+									<h3>AI Fashion Style analyzer</h3>
+									<h4>Deep Learning Project: FASI</h4>
+									<p>옷을 잘 입고 싶다면 당신의 패션을 분석해보세요! <br>인공지능이 총 7가지의 스타일(스트릿/힙합, 심플/캐주얼, 포멀/클래식, 유니크/키치, 걸리시, 섹시/페미닌, 워크/밀리터리)로 분류해드립니다!</p>
+									<ul class="list basic_info">
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+
+        <!--================Footer Area =================-->
+      
+        <!--================End Footer Area =================-->
+        
+        
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../static/js/jquery-3.3.1.min.js"></script>
+        <script src="../static/js/popper.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <script src="../static/js/stellar.js"></script>
+        <script src="../static/vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="../static/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="../static/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="../static/vendors/isotope/isotope.pkgd.min.js"></script>
+        <script src="../static/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="../static/vendors/popup/jquery.magnific-popup.min.js"></script>
+        <script src="../static/js/jquery.ajaxchimp.min.js"></script>
+        <script src="../static/vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="../static/vendors/counter-up/jquery.counterup.min.js"></script>
+        <script src="../static/js/mail-script.js"></script>
+        <script src="../static/js/theme.js"></script>
+
+    </body>
+</html>
