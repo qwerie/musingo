@@ -7,7 +7,3 @@
 ### 실행모습
 https://github.com/qwerie/musingo/assets/111882913/602223fc-4007-46a2-941f-6dac9fbe73ca
 - "street","americancasual","casual", "formal", "girlish", "romantic" 6가지의 분류로 나타납니다.
-
-### 활용 소스
-- 다시 한번 프로젝트에서 참고된 원본 소스를 알려드립니다.
-- https://github.com/6mini/fasi
