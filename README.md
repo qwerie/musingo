@@ -1,6 +1,5 @@
 # musingo
 - AI 기반 패션스타일 분류 웹서비스입니다.
-- [원본 소스](https://github.com/6mini/fasi)를 참고하여 진행되었으며, 웹 서식은 원본을 기반으로 활용하였음을 알려드립니다.
 - [model](https://drive.google.com/file/d/1sXd8KncbZl6pS62csmt7Eh844RTlCs1e/view?usp=sharing)을 따로 다운받으신 뒤, 포함해주셔야 이용 가능합니다.
 - 사용 스택: ResNet50 (bone network), tensorflow, python, HTML, CSS, Javascript, Flask
 - [웹 사이트 링크](https://github.com/qwerie/musingo) -> 현재 중지됨.
